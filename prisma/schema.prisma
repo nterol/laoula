@@ -1,0 +1,185 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider     = "mysql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
+}
+
+model amenagements_cyclables {
+    id_troncon    Int      @id @unique(map: "ogr_fid") @default(autoincrement())
+    id_chemin     Decimal? @db.Decimal(10, 0)
+    id_noeud1     String?  @db.VarChar(21)
+    id_noeud2     String?  @db.VarChar(21)
+    nom           String?  @db.VarChar(200)
+    cyclab1       Decimal? @db.Decimal(10, 0)
+    cyclab2       Decimal? @db.Decimal(10, 0)
+    piste_wkt     String?  @db.LongText
+    piste_geojson String?  @db.LongText
+}
+
+model categories_1 {
+    id_categorie_1 Int     @id
+    nom            String? @db.VarChar(200)
+}
+
+model categories_2 {
+    id_categorie_2 Int     @id
+    id_categorie_1 Int
+    nom            String? @db.VarChar(200)
+
+    @@index([id_categorie_1], map: "id_categorie_1")
+}
+
+model indicateurs {
+    id_indicateur Int     @id @default(autoincrement()) @db.UnsignedInt
+    categorie     String? @db.VarChar(50)
+    nom           String? @db.VarChar(200)
+    info          String? @db.VarChar(1000)
+    src           String? @db.VarChar(50)
+
+    @@index([categorie], map: "categorie")
+}
+
+model interactions {
+    id_interaction Int    @id @default(autoincrement())
+    nom            String @db.VarChar(200)
+    ponderation    Float  @db.Float
+}
+
+model poi {
+    id_poi         Int     @id @default(autoincrement())
+    id_quartier    Int?
+    id_categorie_2 Int?
+    nom            String? @db.VarChar(200)
+    x              Float
+    y              Float
+    src            String? @db.VarChar(200)
+    adresse        String? @db.VarChar(500)
+    info           String? @db.VarChar(1000)
+
+    @@index([id_quartier], map: "idx_id_quartier")
+    @@index([id_categorie_2], map: "idx_id_theme_2")
+}
+
+model poi_bus {
+    id_poi     Int     @id
+    lignes_bus String? @db.VarChar(100)
+    nom        String? @db.VarChar(200)
+}
+
+model poi_ecoles {
+    id_poi Int             @id @default(autoincrement())
+    type   poi_ecoles_type
+    nom    String          @db.VarChar(200)
+}
+
+model poi_parcs {
+    id_poi        Int  @id
+    autor_animaux Int?
+}
+
+model quartiers {
+    id_quartier      Int     @id @default(autoincrement())
+    modulo           Int?    @default(0)
+    nom              String? @db.VarChar(200)
+    centroide_x      Float?
+    centroide_y      Float?
+    descriptif       String? @db.VarChar(200)
+    code_insee       String? @db.VarChar(5)
+    polygone_geojson String? @db.LongText
+    polygone_wkt     String? @db.LongText
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model quartiers_affinites {
+    id_quartier        Int
+    aff_animaux        Float  @default(0) @db.Float
+    aff_mobilite_douce Float  @default(0) @db.Float
+    aff_espaces_verts  Float  @default(0) @db.Float
+    aff_pollution_air  Float  @default(0) @db.Float
+    aff_achat_immo     Float  @default(0) @db.Float
+    aff_location_immo  Float  @default(0) @db.Float
+    aff_vie_nocturne   Float  @default(0) @db.Float
+    aff_vie_diurne     Float  @default(0) @db.Float
+    aff_culture        Float  @default(0) @db.Float
+    aff_enfants        Float? @default(0) @db.Float
+
+    @@index([id_quartier], map: "id_quartier")
+    @@ignore
+}
+
+model quartiers_indicateurs {
+    id_indicateur Int     @db.UnsignedInt
+    id_quartier   Int
+    valeur        String? @db.VarChar(100)
+    unite         String? @db.VarChar(50)
+
+    @@id([id_indicateur, id_quartier])
+    @@index([id_quartier], map: "id_quartier")
+}
+
+model thematiques {
+    id_thematique Int    @id @default(autoincrement())
+    nom           String @db.VarChar(200)
+    beta          Float  @db.Float
+    route         String @db.VarChar(255)
+}
+
+model transport_lignes {
+    id_ligne       Int     @id
+    type_transport String? @db.VarChar(50)
+    nom            String? @db.VarChar(200)
+    couleur        String? @db.Char(6)
+    points         String? @db.Text
+    points_geojson String? @db.Text
+
+    @@index([type_transport], map: "type_transport")
+}
+
+model transport_troncons {
+    id_troncon     Int     @id
+    id_ligne       Int
+    couleur        String? @db.Char(6)
+    id_poi_1       Int?
+    id_poi_2       Int?
+    temps_parcours Int?
+    points         String? @db.Text
+    points_geojson String? @db.Text
+
+    @@index([id_ligne], map: "id_ligne")
+    @@index([id_poi_1], map: "id_poi_1")
+    @@index([id_poi_2], map: "id_poi_2")
+}
+
+model utilisateurs_affinites {
+    id_user                   Int    @id
+    aff_animaux               Float  @default(0) @db.Float
+    aff_mobilite_douce        Float  @default(0) @db.Float
+    aff_espaces_verts         Float  @default(0) @db.Float
+    aff_pollution_air         Float  @default(0) @db.Float
+    aff_achat_immo            Float  @default(0) @db.Float
+    aff_location_immo         Float  @default(0) @db.Float
+    aff_vie_quartier_nocturne Float  @default(0) @db.Float
+    aff_vie_quartier_diurne   Float  @default(0) @db.Float
+    aff_culture               Float  @default(0) @db.Float
+    aff_enfants               Float? @default(0) @db.Float
+}
+
+model utilisateurs_interactions {
+    id_user        Int
+    id_thematique  Int
+    sum            Int @default(0)
+    id_interaction Int
+
+    @@id([id_user, id_thematique, id_interaction])
+    @@index([id_interaction], map: "id_interaction")
+    @@index([id_thematique], map: "id_thematique")
+}
+
+enum poi_ecoles_type {
+    public
+    priv_  @map("privé")
+}

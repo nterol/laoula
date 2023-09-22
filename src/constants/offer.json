@@ -1,0 +1,93 @@
+[
+  {
+    "name": "logement",
+    "title": "nous trouvons votre logement",
+    "text": "Achat vente location ? Nous vous accompagnons dans votre recherche et\n faisons le tri pour vous. Paperasse, organisation de visites, état des lieux....",
+    "logos": ["PRESENT", "CLOCK", "MEDAL"]
+  },
+  {
+    "name": "installation",
+    "title": "Installez vous, on gère tout pour vous !",
+    "text": "Quels que soient les besoins nous vous accompagnons pour votre\n installation. Découverte de la région, visites immobilières, assistance\n pour votre état des lieux...",
+    "logos": ["CLOCK", "PHONE", "MEDAL"]
+  },
+  {
+    "name": "demenagement",
+    "title": "Un déménageur au meilleur prix",
+    "text": "Vous avez besoin de trouver un déménageur et pas le temps de chercher, de\n comparer vous même? Comparaison, estiamtion, sélection...",
+    "logos": ["QUOTATION", "LABEL", "MEDAL"]
+  },
+  {
+    "name": "travaux",
+    "title": "Vos travaux aux meilleurs prix",
+    "text": "Besoin de refaire la peinture ou quelques travaux avant de partirou de vous\n installer? Nous vous aidons à touver le partenaire idéal.Petit travaux, gros\n oeuvre, maintenance, dépannage...",
+    "logos": ["QUOTATION", "LABEL", "MEDAL"]
+  },
+  {
+    "name": "services menagers",
+    "title": "Trouvez votre fée du logi",
+    "text": "Besoin d'un coup de main pour le ménage ? Ménage, ponctuel ou toute\n l'année, dès 2heures.Une aide-ménagère s'occupe de votre domicile quand\n vous voulez, comme vous voulez ",
+    "logos": ["CLOCK", "PRESENT", "MEDAL"]
+  },
+  {
+    "name": "decouverte",
+    "title": "On vous fait visiter la région ?",
+    "text": "Envie d'en savoir plus sur Nantes ? On organise votre séjour. Découverte de la\n région, visite des quartiers qui vous intéressent, de 2-3 logements\n sélectionnés et d'établissements scolaires...",
+    "logos": ["CLOCK", "PRESENT", "MEDAL"]
+  },
+  {
+    "name": "garde enfants",
+    "title": "Trouvez votre baby-sitter",
+    "text": "Garde d'enfant(s) de plus de 3 ans, ponctuelle ou régulière, sorties d'école, \n aide aux devoirs ou accompagnement aux activités extra - scolaires.Faîtes\n garder vos enfants par des intervenantes spécialisées",
+    "logos": ["CLOCK", "PRESENT", "MEDAL"]
+  },
+  {
+    "name": "entretien jardin",
+    "title": "Nous avons la main verte !",
+    "text": "Tonte de gazon, taille de haies, entretien de vos massifs ou balcons, nettoyage\n \"de vos allées et terrasses\": de l'entretien courant à la remise en état complète.",
+    "logos": ["CLOCK", "PRESENT", "MEDAL"]
+  },
+  {
+    "name": "contrat energie",
+    "title": "Votre contrat énergie au meileur prix.",
+    "text": "Vous avez besoin d'établir un nouveau contrat d'énergie ou de le transférer, mais\n vous n'avez pas le temps de chercher et de comparer vous-meme ?\n Démarches, recherche, comparaison...",
+    "logos": ["CLOCK", "LABEL", "PRESENT"]
+  },
+  {
+    "name": "demarche enfance",
+    "title": "tout ce qu'il faut pour vos enfants",
+    "text": "Nous trouvons pour vous le meilleur accompagnement en fonction de vos\n besoins.Inscription scolaire, activités parascolaires, mode de garde...",
+    "logos": ["CLOCK", "PHONE", "MEDAL"]
+  },
+  {
+    "name": "contrat internet",
+    "title": "Votre contrat internet au meilleur prix",
+    "text": "Besoin de trouver un nouveau fournisseur d'accès ?\n Nous vous accompagnons de la souscription de vos contenus Internet au\n meilleur prix, jusqu'à la mise en service.",
+    "logos": ["CLOCK", "LABEL", "PRESENT"]
+  },
+  {
+    "name": "demarches administratives",
+    "title": "Démarches administratives,\n on s'en charge !\n",
+    "text": "Nous vous accompagnons dans toutes vos démarches administratives.\n Changement de Banque, inscription Caf, Pôle Emploi, CPAM...\n",
+    "logos": ["CLOCK", "PHONE", "GLASS"]
+  },
+  {
+    "name": "assurance habitation",
+    "title": "Votre assurance habitation de A à Z",
+    "text": "Vous n'avez pas le temps de chercher et de comparer vous-même ?\n Nous vous accompagnons dans l'établissement de votre contrat.\n Comparaison, estimation, sélection...",
+    "logos": ["QUOTATION", "PRESENT", "MEDAL"]
+  },
+  {
+    "name": "reexpedition",
+    "title": "Transférer votre courrier vers\n une autre adresse en France",
+    "text": "Faites suivre l'intégralité du courrier reçu à votre adresse actuelle vers votre\n nouveau domicile.Grâce à votre contrat de réexpédition, après votre\n déménagement, vous évitez que les objets envoyés à votre ancienne adresse\n soient renvoyés à l'expéditeur.",
+    "logos": ["BOX", "CALENDAR", "HOUSE"],
+
+    "data1": "28, 50€",
+    "duration1": "pour 6 mois *",
+    "condition1": "Renouvelable une fois",
+    "data2": "51, 50€",
+    "duration2": "pour 1 an *",
+    "condition2": "Non renouvelable"
+  }
+]

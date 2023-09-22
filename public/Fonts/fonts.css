@@ -1,0 +1,66 @@
+/* USE: */
+/* "Circular Medium" */
+/* "Circular" */
+/* "Circular Bold" */
+/* "Circular Black" */
+
+@font-face {
+  font-family: "Circular Medium";
+  src: url("CircularStd-Medium/Circular-Std-Medium.eot"); /* IE9 Compat Modes */
+  src: url("CircularStd-Medium/Circular-Std-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("CircularStd-Medium/Circular-Std-Medium.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("CircularStd-Medium/Circular-Std-Medium.woff") format("woff"),
+    /* Pretty Modern Browsers */
+      url("CircularStd-Medium/Circular-Std-Medium.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("CircularStd-Medium/Circular-Std-Medium.svg#svgFontName")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("CircularStd-Book/Circular-Std-Book.eot"); /* IE9 Compat Modes */
+  src: url("CircularStd-Book/Circular-Std-Book.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("CircularStd-Book/Circular-Std-Book.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("CircularStd-Book/Circular-Std-Book.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("CircularStd-Book/Circular-Std-Book.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("CircularStd-Book/Circular-Std-Book.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Circular Bold";
+  src: url("CircularStd-Bold/Circular-Std-Bold.eot"); /* IE9 Compat Modes */
+  src: url("CircularStd-Bold/Circular-Std-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("CircularStd-Bold/Circular-Std-Bold.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("CircularStd-Bold/Circular-Std-Bold.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("CircularStd-Bold/Circular-Std-Bold.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("CircularStd-Bold/Circular-Std-Bold.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Circular Black";
+  src: url("CircularStd-Black/CircularStd-Black.eot"); /* IE9 Compat Modes */
+  src: url("CircularStd-Black/CircularStd-Black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("CircularStd-Black/CircularStd-Black.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("CircularStd-Black/CircularStd-Black.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("CircularStd-Black/CircularStd-Black.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("CircularStd-Black/CircularStd-Black.svg#svgFontName") format("svg"); /* Legacy iOS */
+}

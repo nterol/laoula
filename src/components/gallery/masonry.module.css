@@ -1,0 +1,9 @@
+.masonry_container {
+  width: 100%;
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1em;
+}
