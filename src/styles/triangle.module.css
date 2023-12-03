@@ -1,0 +1,25 @@
+.container {
+    --size: 72px;
+    position: fixed;
+    right: 0px;
+    top: calc(50% - var(--size));
+    width: var(--size);
+    height:calc(2 * var(--size));
+    padding-left:calc(0.3 * var(--size)); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+
+.triangle {
+    position : absolute;
+    top:0;
+    left: 0;
+    border-top: var(--size) solid transparent;
+    border-bottom: var(--size) solid transparent;
+    border-right: var(--size) solid var(--cherry);
+}
+

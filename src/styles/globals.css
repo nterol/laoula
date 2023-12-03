@@ -82,6 +82,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --cherry: #e9064e;
+}
+
 body:has(div[data-page-color="grey"]) {
   @apply bg-ogrey;
 }

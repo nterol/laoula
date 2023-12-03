@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Lottie from "lottie-react";
+import Image from "next/image";
+import { useSyncExternalStore } from "react";
 
 import animatedLogo from "./assets/animated-logo.json";
-
 import desktopCover from "./assets/covers/desktop.jpg";
-import { useSyncExternalStore } from "react";
 
 function usePreferReduceMotion(): boolean {
   function getServerSnapshot() {

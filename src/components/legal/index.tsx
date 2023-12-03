@@ -12,7 +12,7 @@ export function Legal() {
   }
 
   return (
-    <div>
+    <div >
       {show ? (
         <div className="bg-white fixed bottom-2.5 right-[0.5%] z-[1] m-auto flex h-[45px] w-[30%] items-center justify-center rounded-md">
           <div className="flex w-[82%] justify-center pl-[15px]">
@@ -39,13 +39,13 @@ export function Legal() {
         </div>
       ) : (
         <button
-          className="bg-white hover:cursor-pointer; fixed bottom-5 right-[1.5%] h-[25px] w-[25px] rounded-[20px]"
+          className="bg-white hover:cursor-pointer fixed bottom-5 right-[1.5%] h-[25px] w-[25px] rounded-[20px] flex justify-center items-center"
           onClick={handleChange}
         >
           <Image
             src={InfoIcon}
             alt="informations"
-            className="m-auto; z-[2] mt-[21%] block h-3.5"
+            className="m-auto z-[2] mt-[21%] h-3.5 "
           />
         </button>
       )}
