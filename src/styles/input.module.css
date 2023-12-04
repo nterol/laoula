@@ -1,0 +1,20 @@
+
+.input_placeholder {
+}
+.magic_form {}
+.magic_section {
+    max-height:0;
+    -webkit-transition: max-height 1s; 
+    -moz-transition: max-height 1s; 
+    -ms-transition: max-height 1s; 
+    -o-transition: max-height 1s; 
+    transition: max-height 0.2s;  
+}
+
+.magic_form:focus-within > .magic_section {
+    max-height: 100px;
+}
+
+.input_placeholder:not(:focus)::placeholder {
+@apply text-black;
+}

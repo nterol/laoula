@@ -1,52 +1,50 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require("path");
+const path = require('path');
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
   overrides: [
     {
-      extends: [
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      ],
-      files: ["*.ts", "*.tsx"],
+      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
+      files: ['*.ts', '*.tsx'],
       parserOptions: {
-        project: path.join(__dirname, "tsconfig.json"),
+        project: path.join(__dirname, 'tsconfig.json'),
       },
     },
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: path.join(__dirname, "tsconfig.json"),
+    project: path.join(__dirname, 'tsconfig.json'),
   },
-  plugins: ["@typescript-eslint", "prettier"],
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  plugins: ['@typescript-eslint', 'prettier'],
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
+    '@typescript-eslint/consistent-type-imports': [
+      'warn',
       {
-        prefer: "type-imports",
-        fixStyle: "inline-type-imports",
+        prefer: 'type-imports',
+        fixStyle: 'inline-type-imports',
       },
     ],
-    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
-    "import/order": [
-      "error",
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    'import/order': [
+      'error',
       {
-        "newlines-between": "always",
-        "groups": [
-          "builtin", // Built-in types are first
-          "external",
-          "internal",
-          "parent",
-          "sibling"
+        'newlines-between': 'always',
+        groups: [
+          'builtin', // Built-in types are first
+          'external',
+          'internal',
+          'parent',
+          'sibling',
         ],
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": false
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: false,
         },
-        "warnOnUnassignedImports": false
-      }
-    ]
+        warnOnUnassignedImports: false,
+      },
+    ],
   },
 };
 

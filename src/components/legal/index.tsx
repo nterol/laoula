@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import InfoIcon from "./assets/info.png";
+
 import CrossIcon from "./assets/cross.png";
+import InfoIcon from "./assets/info.png";
 
 export function Legal() {
   const [show, setShow] = useState(false);

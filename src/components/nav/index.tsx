@@ -1,4 +1,5 @@
 import { useAtom } from "jotai";
+
 import { type ContentKey, contentTypes } from "~/constants/content";
 import { CurrentContent } from "~/store/content";
 
