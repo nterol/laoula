@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         legal: '#3d3c3a',
+        opurple: '#754ffc',
         owhite: { DEFAULT: '#f1f1f1', dim: '#f4f4f4' },
         ogrey: '#e5e5e5',
         cherry: { DEFAULT: '#e9064e', dim: '#f1004a', light: '#f20348' },

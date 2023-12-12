@@ -1,19 +1,14 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import { type RouterOutputs } from "~/utils/api";
+import { type RouterOutputs } from '~/utils/api';
 
-type GalleryCardProps = RouterOutputs["gallery"]["get"][0];
+type GalleryCardProps = RouterOutputs['gallery']['get'][0];
 
 export function GalleryCard({ name, slug }: GalleryCardProps) {
+  console.log({ slug });
   return (
     <article className="relative h-[320px] rounded-2xl bg-cherry p-0">
-      <Image
-        src={slug}
-        alt={name}
-        fill
-        className="absolute"
-        style={{ objectFit: "contain" }}
-      />
+      <Image src={slug} alt={name} fill className="absolute" style={{ objectFit: 'contain' }} />
     </article>
   );
 }

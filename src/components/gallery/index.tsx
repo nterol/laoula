@@ -1,4 +1,4 @@
-import s from "./masonry.module.css";
+import s from './masonry.module.css';
 
 type GalleryProps = {
   children: React.ReactNode;

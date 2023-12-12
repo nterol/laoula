@@ -1,5 +1,6 @@
-import { TRPCError } from "@trpc/server";
-import { createTRPCRouter, publicProcedure } from "../trpc";
+import { TRPCError } from '@trpc/server';
+
+import { createTRPCRouter, publicProcedure } from '../trpc';
 
 export const districtRouter = createTRPCRouter({
   list: createTRPCRouter({
@@ -9,14 +10,14 @@ export const districtRouter = createTRPCRouter({
           select: { nom: true, id_quartier: true, modulo: true },
         });
         return data.map(({ nom, ...rest }) => ({
-          name: nom?.toLowerCase().replaceAll(" - ", "-").replaceAll(" ", "-"),
+          name: nom?.toLowerCase().replaceAll(' - ', '-').replaceAll(' ', '-'),
           ...rest,
         }));
       } catch (error) {
         console.log({ error });
         throw new TRPCError({
-          message: "❌ ON DISTRIC:LIST:SHALLOW",
-          code: "INTERNAL_SERVER_ERROR",
+          message: '❌ ON DISTRIC:LIST:SHALLOW',
+          code: 'INTERNAL_SERVER_ERROR',
         });
       }
     }),
